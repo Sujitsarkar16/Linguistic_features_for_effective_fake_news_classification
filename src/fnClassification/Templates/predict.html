@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Machine Learning Project</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        background: #ffffff;
+      }
+
+      header {
+        width: 100%;
+        padding: 1em 0;
+        background: #f1f1f1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10%;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .main-content {
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+      }
+
+      .search-container {
+        position: relative;
+        margin-bottom: 2em;
+      }
+
+      .search-input {
+        padding: 10px;
+        width: 800px; /* Adjust as needed */
+        border: 2px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .search-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .predict-button {
+        background: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      .text-primary {
+        margin-top: 20vh;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 1em 0;
+        background: #f1f1f1;
+        text-align: center;
+      }
+      .logo {
+        height: 60px;
+        width: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <img class="logo" src="../static/fake-news.png" />
+        </div>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="/predict">Application</a>
+          <a href="#">Source Code</a>
+        </nav>
+      </div>
+    </header>
+
+    <form class="main-content" action="/predict" method="POST">
+      <h1>A Machine Learning Project</h1>
+      <p>Fake News Forensics: Analyzing the Falsehoods Among Us</p>
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          class="search-input"
+          id="news"
+          name="news"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <button class="predict-button">Predict</button>
+    </form>
+    <br />
+    <p
+      style="
+        font-weight: 500;
+        text-align: center;
+        position: relative;
+        bottom: 75px;
+      "
+      class="text-primary"
+    >
+      <b>{{prediction_text}}</b>
+    </p>
+
+    <footer>
+      <!-- Footer content here -->
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0" />
+    <title>Fact or Fiction? Decoding Today's Media</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20vh;
+        max-height: 100vh;
+        width: 100%;
+        background: #ffffff;
+      }
+
+      header {
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+      }
+
+      nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .main-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 80px;
+      }
+
+      .content-text {
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 12vh;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+
+      p {
+        font-size: 1em;
+        color: #666;
+      }
+
+      .button {
+        background: #0b297d; /* Change this to match the button color in the image */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        height: 30px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+
+      img {
+        height: 58vh;
+        width: 36vw;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <!-- <img class="logo" src="../static/fake-news.png" /> -->
+        </div>
+        <nav>
+          <a href="../Templates/index.html">Home</a>
+          <a href="#">About</a>
+          <a href="/predict">Application</a>
+          <a
+            href="https://github.com/Sujitsarkar16/fake_news_classification_ML.git"
+            >Source Code</a
+          >
+        </nav>
+      </div>
+    </header>
+    <div class="illustration">
+      <img src="../static/newsstand-bro.png" alt="Figure" />
+    </div>
+
+    <div class="main-content">
+      <div class="content-text">
+        <h1>Fact or Fiction?<br />Decoding Today's Media</h1>
+        <p>
+          Fake news spreads like wildfire online, often disguised as real
+          headlines. Filled with misleading information and emotional triggers,
+          it aims to manipulate and deceive.Spotting it requires checking
+          sources, looking for factual inconsistencies, and being wary of
+          content that inflames rather than informs.
+        </p>
+
+        <a href="/predict"><button class="button">GET STARTED</button></a>
+      </div>
+    </div>
+  </body>
+</html>
